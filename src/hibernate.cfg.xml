@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<!-- Database connection settings -->
+	<session-factory>
+		<property name="hibernate.connection.driver_class">
+			com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/hibernet1</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">ram123@R</property>
+
+		<!-- JDBC connection pool settings -->
+		<property name="hibernate.connection.pool_size">5</property>
+
+		<!-- SQL dialect for MySQL -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- Format SQL logged to stdout -->
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- Auto create/update tables based on the mapping -->
+		<property name="hibernate.hbm2ddl.auto">create</property>
+
+		<!-- Mapping files -->
+		<!-- Add your entity mappings here -->
+		<mapping class="com.n.model.Student" />
+		<!-- Add more mappings if needed -->
+
+	</session-factory>
+</hibernate-configuration>
